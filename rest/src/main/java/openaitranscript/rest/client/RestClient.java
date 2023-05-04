@@ -11,7 +11,7 @@ import openaitranscript.rest.model.TranscriptResponse;
 @FeignClient(
         name = "openai-service",
         url = "${openai-service.urls.base-url}",
-        configuration = RestApplication.class
+        configuration = FeignConfig.class
 )
 public interface RestClient {
     @PostMapping(value = "${openai-service.urls.create-transcription-url}", headers = {"Content-Type=multipart/form-data"})
