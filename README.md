@@ -6,7 +6,7 @@
 
 ## To get Started
 
-* Change API key in application.yml to your own created using your open api account
+* Change API key in application.yml to your own created using your open ai account
 
 ```
 cd rest
