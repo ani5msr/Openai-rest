@@ -27,9 +27,7 @@ public class FeignConfig {
     @Value("${openai-service.api-key}")
     private String apiKey;
 
-    @Value("${openai-service.gpt-model}")
-    private String model;
-
+ 
     @Value("${openai-service.audio-model}")
     private static String audioModel;
     
