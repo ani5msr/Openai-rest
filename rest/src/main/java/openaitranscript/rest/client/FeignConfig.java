@@ -31,8 +31,9 @@ public class FeignConfig {
     private String model;
 
     @Value("${openai-service.audio-model}")
-    private String audioModel;
-
+    private static String audioModel;
+    
+    
     @Bean
     public Request.Options options() {
         return new Request.Options();
@@ -52,4 +53,12 @@ public class FeignConfig {
     public RequestInterceptor apiKeyInterceptor() {
         return request -> request.header("Authorization", "Bearer " + apiKey);
     }
+
+	public static String getAudioModel() {
+		return audioModel;
+	}
+
+	public void setAudioModel(String audioModel) {
+		this.audioModel = audioModel;
+	}
 }
