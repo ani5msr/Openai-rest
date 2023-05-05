@@ -17,7 +17,7 @@ public class RestService {
 
     public TranscriptResponse createTranscript(TranscriptRequest transcriptionRequest){
         WhisperTranscriptRequest whisperTranscriptionRequest = WhisperTranscriptRequest.builder()
-                .model(FeignConfig.getAudioModel())
+                .model(transcriptionRequest.getModel())
                 .file(transcriptionRequest.getFile())
                 .build();
         return restClient.createTranscript(whisperTranscriptionRequest);

@@ -54,7 +54,7 @@ public class FeignConfig {
         return request -> request.header("Authorization", "Bearer " + apiKey);
     }
 
-	public static String getAudioModel() {
+	public String getAudioModel() {
 		return audioModel;
 	}
 

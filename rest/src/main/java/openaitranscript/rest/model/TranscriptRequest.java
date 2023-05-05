@@ -17,5 +17,6 @@ public class TranscriptRequest implements Serializable {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+	private String model;
 	private MultipartFile file;
 }
